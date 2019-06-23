@@ -29,3 +29,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+
+/.mwn
+mwnw
+mwnw.cmd
+
+/src/main/resources/config.properties
