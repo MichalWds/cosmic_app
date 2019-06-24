@@ -37,10 +37,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--database-->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+            <version>1.4.199</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -61,6 +62,16 @@
 
     <build>
         <plugins>
+<!--flyway-->
+            <plugin>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-maven-plugin</artifactId>
+            <version>4.2.0</version>
+            <configuration>
+                <url>jdbc:h2:file:./db</url>
+                <user>sa</user>
+            </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
