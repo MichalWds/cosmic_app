@@ -39,5 +39,4 @@ public class Planet {
 
     @Column (name = "planet_image")
     private String planetImage;
-
 }
