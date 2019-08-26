@@ -25,5 +25,4 @@ public class PlanetController {
     public List<Planet> getPlanets(){
         return planetService.getPlanets();
     }
-
 }
