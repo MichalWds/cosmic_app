@@ -39,5 +39,30 @@ public class PlanetService {
                 .collect(Collectors.toList());
     }
 
+    public Planet addPlanet (PlanetDTO planetDTO){
+        return planetRepository.save(planetMapper.reverseMap(planetDTO));
+    }
+
+    public void updatePlanet(PlanetDTO planetDTO){
+        planetRepository.findPlanetByPlanetName(planetDTO.getPlanetName())//if planet is null, then move forward
+               .ifPresent(p -> {  //if planet exist, then my planet sets some options, like name, type... after that, I save it)
+                   p.setDistanceFromSun(planetDTO.getDistanceFromSun());
+                   p.setOneWayLightTimeToTheSun(planetDTO.getOneWayLightTimeToTheSun());
+                   p.setLengthOfYears(planetDTO.getLengthOfYears());
+                   p.setPlanetType(planetDTO.getPlanetType());
+                   p.setPlanetInfo(planetDTO.getPlanetInfo());
+                   p.setPlanetImage(planetDTO.getPlanetImage());
+
+                   planetRepository.save(p);
+               });
+
+
+
+    }
+
+
+
+
+
 
 }

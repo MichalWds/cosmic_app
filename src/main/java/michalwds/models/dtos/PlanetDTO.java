@@ -24,4 +24,5 @@ public class PlanetDTO {
     private String planetInfo;
 
     private String planetImage;
+
 }
