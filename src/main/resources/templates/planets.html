@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+
+
+<body>
+<div class="containter">
+    <div class="row">     <!--we can inject piece of code with tables from table.html  -->
+        <div th:replace="fragments/table :: table"></div>
+    </div>
+</div>
+</body>
+</html>
