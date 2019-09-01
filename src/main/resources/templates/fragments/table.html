@@ -17,7 +17,7 @@
  <!--static method of thymeleaf, to make number separation value=distFrSun, ilosc miejsc dziesietnych, separator will be point or comma (enum), -->
                     <td th:text="${#numbers.formatInteger(p.getDistanceFromSun(), 1, 'COMMA')}"></td>
                     <td th:text="${#numbers.formatDecimal(p.getOneWayLightTimeToTheSun(), 1,6, 'POINT')}"></td>
-                    <td th:text="${#numbers.formatInteger(p.getLenghtOfYear(), 1, 'COMMA')}"></td>
+                    <td th:text="${#numbers.formatInteger(p.getLengthOfYears(), 1, 'COMMA')}"></td>
                     <td th:text="${p.getPlanetType()}"></td>
 
               <td>
