@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: head">
+<head th:replace="fragments/header :: head"></head>
 
+<body class="masterhead">
 
-</head>
+<div class="container">
 
-<body>
-
-<header class="masterhead">
     <div class="row h-100 align-items-center">
         <div class="col-12 text-center">
             <h2 class="font-weight-light content"> Welcome to my Cosmic Project App.
@@ -16,6 +14,10 @@
             <a href="/planets"><p>Solar System Admin Panel</p></a>
         </div>
     </div>
-</header>
+    <div class="row">
+        <div th:replace="fragments/overview :: planets"></div>
+    </div>
+
+</div>
 </body>
 </html>

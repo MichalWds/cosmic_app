@@ -1,12 +1,11 @@
 package michalwds.controllers;
 
+import michalwds.models.dtos.PlanetDTO;
 import michalwds.services.PlanetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HomeController {
@@ -19,7 +18,9 @@ public class HomeController {
     }
 
     @GetMapping("/")
-    public String homePage() {
+    public String homePage(ModelMap modelMap) {
+        modelMap.addAttribute("planets", planetService.getPlanetsDTO());
+
         return "index";
     }
 
@@ -33,6 +34,12 @@ public class HomeController {
     @GetMapping("/delete")
     public String deletePlanet(@RequestParam(value = "planet") String planetName){
         planetService.deletingPlanet(planetName);
+        return "redirect:/planets";
+    }
+
+    @PostMapping("/add")  //model attribute binds all inputs using keys
+    public String addPlanet(@ModelAttribute PlanetDTO planet){
+        planetService.addPlanet(planet);
         return "redirect:/planets";
     }
 
