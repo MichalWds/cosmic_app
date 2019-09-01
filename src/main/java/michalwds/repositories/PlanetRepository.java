@@ -25,7 +25,7 @@ public interface PlanetRepository extends JpaRepository<Planet, Long> {
 
     @Transactional  //running persistance hibernate, can delete and do anything to delete by myself not automatical
     @Modifying  //without this can't modifing planets (for example deleting)
-    @Query("select p from Planet p where p.planetName=?1")
+    @Query("delete from Planet p where p.planetName=?1")
     void deletePlanetByPlanetName(String planetName);
 
 
