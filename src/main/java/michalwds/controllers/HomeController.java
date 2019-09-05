@@ -51,6 +51,6 @@ public class HomeController {
     public String createFile() throws NoSuchMethodException, IOException, IllegalAccessException, InvocationTargetException {
         CreatorXLS<PlanetDTO> creatorXLS = new CreatorXLS<>(PlanetDTO.class);
         creatorXLS.createFile(planetService.getPlanetsDTO(), "src/main/resources", "planets");
-        return "redirect:/index";
+        return "redirect:/";
     }
 }

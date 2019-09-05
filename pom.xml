@@ -46,10 +46,10 @@
         </dependency>
 
         <dependency>
-        <groupId>io.springfox</groupId>
-        <artifactId>springfox-swagger-ui</artifactId>
-        <version>2.9.2</version>
-        <scope>compile</scope>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+            <scope>compile</scope>
         </dependency>
 
         <!--database-->
@@ -109,6 +109,17 @@
             <artifactId>spring-tx</artifactId>
             <version>5.1.9.RELEASE</version>
         </dependency>
+        <!--SPRING SECURITY -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-security-tests</artifactId>
+            <scope>test</scope>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
