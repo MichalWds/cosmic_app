@@ -1,9 +1,5 @@
-package michalwds.commons;
+package michalwds.commons.security;
 
-
-import michalwds.commons.security.CustomUserDetails;
-import michalwds.commons.security.UserAppRepository;
-import michalwds.models.UserApp;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
