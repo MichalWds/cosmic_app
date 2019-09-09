@@ -1,9 +1,9 @@
 package michalwds.commons.security;
 
-import michalwds.models.UserApp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
 
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -19,9 +19,10 @@ public class CustomUserDetails extends UserApp implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles()
                 .stream()
-                .map(role -> new SimpleGrantedAuthority("ROLE_"+ role.getRoleName()))
+                .map(role -> new SimpleGrantedAuthority("ROLE_"+role.getRole()))
                 .collect(Collectors.toList());
     }
+
 
 
     @Override
