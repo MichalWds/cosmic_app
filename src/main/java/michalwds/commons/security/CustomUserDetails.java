@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 
 public class CustomUserDetails extends UserApp implements UserDetails {
 
-
     public CustomUserDetails(UserApp userApp) {
         super(userApp);  //odwołuje się do konstruktora UserApp, wywołując samą siebie
     }
@@ -22,8 +21,6 @@ public class CustomUserDetails extends UserApp implements UserDetails {
                 .map(role -> new SimpleGrantedAuthority("ROLE_"+role.getRole()))
                 .collect(Collectors.toList());
     }
-
-
 
     @Override
     public String getUsername() {

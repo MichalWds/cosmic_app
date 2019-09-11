@@ -26,6 +26,4 @@ public class CosmicAppApplication {
     public static void main(String[] args) {
         SpringApplication.run(CosmicAppApplication.class, args);
     }
-
-
 }
