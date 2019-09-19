@@ -10,7 +10,7 @@ import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data //getters and setters Lombok
+@Getter
 @Entity
 @Table(name = "role")
 public class Role {
