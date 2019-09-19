@@ -11,12 +11,12 @@ import java.util.Set;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "user") //schema ="public") jak nie w myysql
+@Table(name = "user")  //schema= public jak nie w myysql
 public class UserApp {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // auto
-    private int id;
+    private int user_id;
 
     private String name;
     private String password;

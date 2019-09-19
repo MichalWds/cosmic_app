@@ -21,3 +21,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
     }
 
 }
+
+//new SpringApplicationBuilder(SecurityCycleBeanDependencyApplication.class)
+//        .initializers((ApplicationContextInitializer<GenericApplicationContext>) applicationContext -> applicationContext.setAllowCircularReferences(false))
+//        .run(args);
