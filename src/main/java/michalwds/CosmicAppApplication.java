@@ -21,6 +21,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @SpringBootApplication
 public class CosmicAppApplication {
 
+    //Run queries before run app to create password
+
     @Bean
     PasswordEncoder getPasswordEncoder(){
         return new BCryptPasswordEncoder();
